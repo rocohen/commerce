@@ -1,0 +1,24 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+  <h2 class="title">Categories</h2>
+  {% if categories %}
+
+    <div class="row mx-auto">
+      {% for category in categories %}
+      <a href="{% url 'category' category.slug %}" class="text-decoration-none text-info cat-card">
+        <div class="col-sm-4 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{ category.categoryImage }}" class="card-img-top" alt="image-card">
+            <div class="card-body">
+              <p class="card-text">{{ category.name }}</p>
+            </div>
+          </div>
+        </div>
+      </a>    
+      {% endfor %}
+    </div>
+  {% endif %}
+
+{% endblock %}

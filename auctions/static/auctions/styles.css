@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+
+
+body {
+  background-color: #F3F3FB;
+  font-family: 'Oswald', sans-serif;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+header {
+  background-color: #fff159;
+  box-shadow: 1px 3px 6px #ccc;
+}
+
+.navbar-light .navbar-nav .nav-link,
+header a {
+  color: #454655;
+}
+
+header a:hover,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.current {
+  color: #17A2B8 ;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.logo-container h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #454655;
+}
+
+.logo-container svg {
+  fill: #454655;
+}
+
+.nav-item span {
+  display: inline-block;
+  font-size: .65rem;
+  padding: .2em .75em;
+  box-shadow: 1px 3px 6px #ccc;
+}
+
+footer {
+  text-align: center;
+  margin-top: 6em;
+}
+
+
+/*=========== index =============*/
+.title {
+  margin-bottom: .9em;
+  padding-left: .1em;
+  font-size: 1.7rem;
+}
+
+.item-details__description {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #454655;
+}
+
+.item-details__price {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0;
+  color: #454655;
+}
+
+.item-details__price span {
+  color: #78c37a;
+  font-weight: 700;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+/*================ listing ===============*/
+.listing-wrapper {
+  display: flex;
+  height: max-content
+}
+
+.listing-description {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.listing-img {
+  max-width: 450px;
+  border-radius: 5px;
+  padding: .2em;
+  margin-right: 1em;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+.comments-section {
+  margin-top: 6em;
+}
+
+.comments-form {
+  margin-bottom: 6em;
+}
+
+.bidForm.form-inline label {
+  display: none !important;
+}
+
+.card {
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.cat-card:hover,
+.listing-card:hover {
+  opacity: 0.8;
+}

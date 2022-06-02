@@ -1,0 +1,30 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2 class="title">Category: {{ category }}</h2>
+
+    <div class="row">
+        {% for category_listing in category_listings %} 
+        <div class="card mb-3 mx-auto listing-card" style="max-width: 520px;">
+            <a class="text-decoration-none" href="{% url 'listing' category_listing.id %}">
+            <div class="row no-gutters"> 
+                <div class="col-md-4">
+                <img src="{{ category_listing.imageURL }}" class="card-img" alt="listing image">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title text-info">{{ category_listing.title }}</h5>
+                    <p class="card-text item-details__description font-weight-normal">{{ category_listing.description }}</p>
+                    <p class="item-details__price">Price: <span>${{ category_listing.startingBid }}</span></p>
+                    <p class="card-text"><small class="text-muted">Created on {{ category_listing.creationDate }}</small></p>
+                </div>
+                </div>
+            </div>
+        </a>
+        </div>
+        {% empty %}
+        <p class="h4 mx-auto">No listings with <span class="text-info">{{ category.name }}</span> so far.</p>    
+        {% endfor %}
+    </div>
+
+{% endblock %}
